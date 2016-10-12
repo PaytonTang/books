@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    {{#each model.books as |book|}}
+    <div class="col-md-3">
+      <h1>{{#link-to "book.detail" book }} {{book.title}} {{/link-to}}</h1>
+      <p>{{book.description}}</p>
+      <span>Publish at: {{book.created_at}}</span>
+    </div>
+    {{/each}}
+  </div>
+</div>
